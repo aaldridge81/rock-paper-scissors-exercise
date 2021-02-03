@@ -1,5 +1,9 @@
 # game.py
 
+# importing random function
+
+import random
+
 # introduction to game
 print("-------------------")
 print("Welcome 'Player One' to my Rock-Paper-Scissors game...")
@@ -8,10 +12,10 @@ print("-------------------")
 # asking for user input
 
 
-x = input("Please choose either 'rock', 'paper', or 'scissors':")
+user_choice = input("Please choose either 'rock', 'paper', or 'scissors':")
 
 # print(x)
-print("You chose:", x)
+print("You chose:", user_choice)
 
 
 # can print many things in a string as long as they are seperated by commas
@@ -22,6 +26,37 @@ print("You chose:", x)
 
 # string inerpolation / format string usage
 # print(f"you chose: {x}")
+
+
+
+# simulating a computer input
+
+#computer_choice = "paper"
+
+
+options = ['rock', 'paper', 'scissors']
+
+computer_choice = random.choice(options)
+
+
+
+print(f"The computer chose: {computer_choice}")
+
+
+
+
+
+
+
+
+
+# print("The computer chose: 'paper'")
+
+
+
+
+
+
 
 exit()
 
@@ -35,18 +70,6 @@ exit()
 
 
 
-
-
-
-
-
-
-
-print("You chose: 'rock'")
-
-
-# simulating a computer input
-print("The computer chose: 'paper'")
 
 # determining who won
 print("-------------------")
