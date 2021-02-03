@@ -39,11 +39,30 @@ print("You chose:", user_choice)
 
 options = ['rock', 'paper', 'scissors']
 
+
+# validate the user selection
+#
+# stop the program (not try to determine the winner)
+# ... if the user choice is invalid
+
+user_choice.lower()
+
+if user_choice in options:
+    pass
+else:
+        print("OOPS, please choose a valid option and try again")
+        exit()
+
+
+        
 computer_choice = random.choice(options)
 # alternative: computer_choice = choice(options)
 
 
 print(f"The computer chose: {computer_choice}")
+
+
+
 
 
 # determining who won
@@ -56,34 +75,17 @@ print(f"The computer chose: {computer_choice}")
 
 if user_choice == computer_choice:
         print("It's tie!")
-    elif user_choice == "paper" and computer_choice == "rock":
+elif user_choice == "paper" and computer_choice == "rock":
         print("You win! Congrats")
-    elif user_choice == "paper" and computer_choice == "scissors":
+elif user_choice == "paper" and computer_choice == "scissors":
         print("Oh! The computer won, that's ok!")
-    elif user_choice == "rock" and computer_choice == "paper":
+elif user_choice == "rock" and computer_choice == "paper":
         print("Oh! The computer won, that's ok!")
-    elif user_choice == "rock" and computer_choice == "scissors":
+elif user_choice == "rock" and computer_choice == "scissors":
         print("You win! Congrats")
-    elif user_choice == "scissors" and computer_choice == "paper":
+elif user_choice == "scissors" and computer_choice == "paper":
         print("You win! Congrats")
-    elif user_choice == "scissors" and computer_choice == "rock":
+elif user_choice == "scissors" and computer_choice == "rock":
         print("Oh! The computer won, that's ok!")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("-------------------")
-print("Oh, the computer won. It's ok.")
-print("-------------------")
-print("Thanks for playing. Please play again!")
