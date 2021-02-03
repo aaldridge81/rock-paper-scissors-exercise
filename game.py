@@ -3,6 +3,9 @@
 # importing random function
 
 import random
+# alternative: from random import choice 
+
+
 
 # introduction to game
 print("-------------------")
@@ -37,41 +40,49 @@ print("You chose:", user_choice)
 options = ['rock', 'paper', 'scissors']
 
 computer_choice = random.choice(options)
-
+# alternative: computer_choice = choice(options)
 
 
 print(f"The computer chose: {computer_choice}")
 
 
-
-
-
-
-
-
-
-# print("The computer chose: 'paper'")
-
-
-
-
-
-
-
-exit()
-
-
-
-
-
-
-
-
-
-
-
-
 # determining who won
+
+
+
+#single equal sign assigns value to variable. the way it is evaluated as saying what is on the right, and store it in the left
+# equality operations. is what is on the left equal to what is on the right? true or false
+
+
+if user_choice == computer_choice:
+        print("It's tie!")
+    elif user_choice == "paper" and computer_choice == "rock":
+        print("You win! Congrats")
+    elif user_choice == "paper" and computer_choice == "scissors":
+        print("Oh! The computer won, that's ok!")
+    elif user_choice == "rock" and computer_choice == "paper":
+        print("Oh! The computer won, that's ok!")
+    elif user_choice == "rock" and computer_choice == "scissors":
+        print("You win! Congrats")
+    elif user_choice == "scissors" and computer_choice == "paper":
+        print("You win! Congrats")
+    elif user_choice == "scissors" and computer_choice == "rock":
+        print("Oh! The computer won, that's ok!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 print("-------------------")
 print("Oh, the computer won. It's ok.")
 print("-------------------")
