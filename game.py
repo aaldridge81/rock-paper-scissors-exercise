@@ -3,13 +3,26 @@
 # importing random function
 
 import random
+
+import os
+
+
+import dotenv
+from dotenv import load_dotenv
+
 # alternative: from random import choice 
-
-
+#from dotenv import load_dotenv # go get the function we need
+#load_dotenv() # invoke the function
+#USER_NAME = os.getenv("USER_NAME", default="Player One") 
 
 # introduction to game
 print("-------------------")
-print("Welcome 'Player One' to my Rock-Paper-Scissors game...")
+# print("Welcome 'Player One' to my Rock-Paper-Scissors game...")
+
+USER_NAME = os.getenv("USER_NAME")
+
+print(f"PLAYER: '{USER_NAME}'")
+#> "Jon Snow"
 print("-------------------")
 
 # asking for user input
@@ -87,5 +100,4 @@ elif user_choice == "scissors" and computer_choice == "paper":
         print("You win! Congrats")
 elif user_choice == "scissors" and computer_choice == "rock":
         print("Oh! The computer won, that's ok!")
-
-
+# adapted from solution shared by Will in Slack
